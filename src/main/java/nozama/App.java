@@ -12,10 +12,9 @@ public class App {
 		EntityTransaction tx = manager.getTransaction();
 		tx.begin();
 
-		//Usuario user = manager.find(Usuario.class, 2L);
 		
 		Usuario user = new Usuario();
-		System.out.println("User encontrado " + user.getId() + "é o " + user.getNome());
+		/*System.out.println("User encontrado " + user.getId() + "é o " + user.getNome());*/
 		user.setNome("vitor");
 		user.setEmail("vitor@asd.com");
 		user.setSenha("456");

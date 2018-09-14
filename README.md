@@ -1,3 +1,7 @@
-Equipe: Débora Áurea, Eliabe Francelino, João Vitor;
 
-IFAL - Campus Rio Largo
+Equipe:
+  Débora Áurea;
+  Eliabe Francelino;
+  João Vitor;
+  
+ IFAL - Campus Rio Largo

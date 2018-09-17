@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /*pagina sem tempo determinado de permanencia
@@ -16,7 +15,7 @@ import javax.persistence.Id;
 public class Departamento {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue
 	private String codigoDep;
 	@Column
 	private String nome;

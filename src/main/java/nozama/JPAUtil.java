@@ -4,29 +4,28 @@ import javax.persistence.*;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
-
 public class JPAUtil {
-  private static final String PERSISTENCE_UNIT_NAME = "PERSISTENCE";
-  private static EntityManagerFactory factory;
-  
-  static {
-	  factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-  }
+	private static final String PERSISTENCE_UNIT_NAME = "PERSISTENCE";
+	private static EntityManagerFactory factory;
 
-  public static EntityManagerFactory getEntityManagerFactory() {
-    if (factory == null) {
-      factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-    }
-    return factory;
-  }
+	static {
+		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+	}
 
-  public static void close() {
-    if (factory != null) 
-      factory.close();
-    
-  }
-  
-  public static EntityManager getEntityManager() {
-	  return factory.createEntityManager();
-	  }
+	public static EntityManagerFactory getEntityManagerFactory() {
+		if (factory == null) {
+			factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+		}
+		return factory;
+	}
+
+	public static void close() {
+		if (factory != null)
+			factory.close();
+
+	}
+
+	public static EntityManager getEntityManager() {
+		return factory.createEntityManager();
+	}
 }

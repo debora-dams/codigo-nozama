@@ -7,8 +7,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "usuario")
 public class Usuario {
 
 	@Id
@@ -31,8 +33,7 @@ public class Usuario {
 	private String telefone;
 
 	public Usuario() {
-		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Endereco getEndereco() {

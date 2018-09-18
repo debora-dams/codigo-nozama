@@ -10,9 +10,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
-      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/nozama" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/nozama-nozama" />
       <property name="javax.persistence.jdbc.user" value="postgres" />
-      <property name="javax.persistence.jdbc.password" value="dams1998" />
+      <property name="javax.persistence.jdbc.password" value="postgre" />
       <property name="hibernate.show_sql" value="true" />
       <property name="hibernate.hbm2ddl.auto" value="update" />
       <property name="hibernate.format_sql" value="false" />

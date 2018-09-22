@@ -14,19 +14,26 @@ import javax.persistence.Id;
 public class Departamento {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private String codigoDep;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
 	@Column
 	private String nome;
 
-	
-	public Departamento(String nome, String codigoDep) {
+	public Departamento(String nome, Integer id) {
 		this.nome = nome;
-		this.codigoDep = codigoDep;
+		this.id = id;
 	}
 
 	public Departamento() {
 
+	}
+
+	public Integer getCodigoDep() {
+		return id;
+	}
+
+	public void setCodigoDep(Integer codigoDep) {
+		this.id = codigoDep;
 	}
 
 	public String getNome() {
@@ -37,20 +44,11 @@ public class Departamento {
 		this.nome = nome;
 	}
 
-	public String getCodigoDep() {
-		return codigoDep;
-	}
-
-	public void setCodigoDep(String codigoDep) {
-		this.codigoDep = codigoDep;
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((codigoDep == null) ? 0 : codigoDep.hashCode());
-		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
 
@@ -63,15 +61,10 @@ public class Departamento {
 		if (getClass() != obj.getClass())
 			return false;
 		Departamento other = (Departamento) obj;
-		if (codigoDep == null) {
-			if (other.codigoDep != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!codigoDep.equals(other.codigoDep))
-			return false;
-		if (nome == null) {
-			if (other.nome != null)
-				return false;
-		} else if (!nome.equals(other.nome))
+		} else if (!id.equals(other.id))
 			return false;
 		return true;
 	}

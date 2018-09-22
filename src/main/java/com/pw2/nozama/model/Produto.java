@@ -10,8 +10,8 @@ import javax.persistence.Id;
 public class Produto {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer codigoProd;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
 	@Column
 	private String nome;
 	@Column
@@ -24,7 +24,7 @@ public class Produto {
 	public Produto(String nome, Double preco, Integer codigoProd, String marca) {
 		this.nome = nome;
 		this.preco = preco;
-		this.codigoProd = codigoProd;
+		this.id = codigoProd;
 		this.marca = marca;
 	}
 
@@ -32,12 +32,12 @@ public class Produto {
 
 	}
 
-	public String getMarca() {
-		return marca;
+	public Integer getCodigoProd() {
+		return id;
 	}
 
-	public void setMarca(String marca) {
-		this.marca = marca;
+	public void setCodigoProd(Integer codigoProd) {
+		this.id = codigoProd;
 	}
 
 	public String getNome() {
@@ -56,31 +56,27 @@ public class Produto {
 		this.preco = preco;
 	}
 
-	public Integer getCodigoProd() {
-		return codigoProd;
+	public String getMarca() {
+		return marca;
 	}
 
-	public void setCodigoProd(Integer codigoProd) {
-		this.codigoProd = codigoProd;
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
 
-	public Integer getQuantidade() {
+	public Integer getQuantidadeDeEstoque() {
 		return quantidadeDeEstoque;
 	}
 
-	public void setQuantidade(Integer quantidade) {
-		this.quantidadeDeEstoque = quantidade;
+	public void setQuantidadeDeEstoque(Integer quantidadeDeEstoque) {
+		this.quantidadeDeEstoque = quantidadeDeEstoque;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((codigoProd == null) ? 0 : codigoProd.hashCode());
-		result = prime * result + ((marca == null) ? 0 : marca.hashCode());
-		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		result = prime * result + ((preco == null) ? 0 : preco.hashCode());
-		result = prime * result + ((quantidadeDeEstoque == null) ? 0 : quantidadeDeEstoque.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
 
@@ -93,30 +89,10 @@ public class Produto {
 		if (getClass() != obj.getClass())
 			return false;
 		Produto other = (Produto) obj;
-		if (codigoProd == null) {
-			if (other.codigoProd != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!codigoProd.equals(other.codigoProd))
-			return false;
-		if (marca == null) {
-			if (other.marca != null)
-				return false;
-		} else if (!marca.equals(other.marca))
-			return false;
-		if (nome == null) {
-			if (other.nome != null)
-				return false;
-		} else if (!nome.equals(other.nome))
-			return false;
-		if (preco == null) {
-			if (other.preco != null)
-				return false;
-		} else if (!preco.equals(other.preco))
-			return false;
-		if (quantidadeDeEstoque == null) {
-			if (other.quantidadeDeEstoque != null)
-				return false;
-		} else if (!quantidadeDeEstoque.equals(other.quantidadeDeEstoque))
+		} else if (!id.equals(other.id))
 			return false;
 		return true;
 	}

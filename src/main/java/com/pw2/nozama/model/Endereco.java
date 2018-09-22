@@ -10,8 +10,8 @@ import javax.persistence.Id;
 public class Endereco {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer idEndereco;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
 	@Column
 	private String estado;
 	@Column
@@ -39,19 +39,11 @@ public class Endereco {
 	}
 
 	public Integer getIdEndereco() {
-		return idEndereco;
+		return id;
 	}
 
 	public void setIdEndereco(Integer idEndereco) {
-		this.idEndereco = idEndereco;
-	}
-
-	public String getLogradouro() {
-		return logradouro;
-	}
-
-	public void setLogradouro(String logradouro) {
-		this.logradouro = logradouro;
+		this.id = idEndereco;
 	}
 
 	public String getEstado() {
@@ -70,12 +62,12 @@ public class Endereco {
 		this.pais = pais;
 	}
 
-	public String getRua() {
+	public String getLogradouro() {
 		return logradouro;
 	}
 
-	public void setRua(String rua) {
-		this.logradouro = rua;
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
 	}
 
 	public int getNumero() {
@@ -114,14 +106,7 @@ public class Endereco {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((cep == null) ? 0 : cep.hashCode());
-		result = prime * result + ((cidade == null) ? 0 : cidade.hashCode());
-		result = prime * result + ((complemento == null) ? 0 : complemento.hashCode());
-		result = prime * result + ((estado == null) ? 0 : estado.hashCode());
-		result = prime * result + ((idEndereco == null) ? 0 : idEndereco.hashCode());
-		result = prime * result + ((logradouro == null) ? 0 : logradouro.hashCode());
-		result = prime * result + numero;
-		result = prime * result + ((pais == null) ? 0 : pais.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
 
@@ -134,42 +119,10 @@ public class Endereco {
 		if (getClass() != obj.getClass())
 			return false;
 		Endereco other = (Endereco) obj;
-		if (cep == null) {
-			if (other.cep != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!cep.equals(other.cep))
-			return false;
-		if (cidade == null) {
-			if (other.cidade != null)
-				return false;
-		} else if (!cidade.equals(other.cidade))
-			return false;
-		if (complemento == null) {
-			if (other.complemento != null)
-				return false;
-		} else if (!complemento.equals(other.complemento))
-			return false;
-		if (estado == null) {
-			if (other.estado != null)
-				return false;
-		} else if (!estado.equals(other.estado))
-			return false;
-		if (idEndereco == null) {
-			if (other.idEndereco != null)
-				return false;
-		} else if (!idEndereco.equals(other.idEndereco))
-			return false;
-		if (logradouro == null) {
-			if (other.logradouro != null)
-				return false;
-		} else if (!logradouro.equals(other.logradouro))
-			return false;
-		if (numero != other.numero)
-			return false;
-		if (pais == null) {
-			if (other.pais != null)
-				return false;
-		} else if (!pais.equals(other.pais))
+		} else if (!id.equals(other.id))
 			return false;
 		return true;
 	}

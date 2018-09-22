@@ -19,7 +19,7 @@ public class Produto {
 	@Column
 	private String marca;
 	@Column
-	private Integer quantidade;
+	private Integer quantidadeDeEstoque;
 
 	public Produto(String nome, Double preco, Integer codigoProd, String marca) {
 		this.nome = nome;
@@ -65,11 +65,11 @@ public class Produto {
 	}
 
 	public Integer getQuantidade() {
-		return quantidade;
+		return quantidadeDeEstoque;
 	}
 
 	public void setQuantidade(Integer quantidade) {
-		this.quantidade = quantidade;
+		this.quantidadeDeEstoque = quantidade;
 	}
 
 	@Override
@@ -80,7 +80,7 @@ public class Produto {
 		result = prime * result + ((marca == null) ? 0 : marca.hashCode());
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		result = prime * result + ((preco == null) ? 0 : preco.hashCode());
-		result = prime * result + ((quantidade == null) ? 0 : quantidade.hashCode());
+		result = prime * result + ((quantidadeDeEstoque == null) ? 0 : quantidadeDeEstoque.hashCode());
 		return result;
 	}
 
@@ -113,10 +113,10 @@ public class Produto {
 				return false;
 		} else if (!preco.equals(other.preco))
 			return false;
-		if (quantidade == null) {
-			if (other.quantidade != null)
+		if (quantidadeDeEstoque == null) {
+			if (other.quantidadeDeEstoque != null)
 				return false;
-		} else if (!quantidade.equals(other.quantidade))
+		} else if (!quantidadeDeEstoque.equals(other.quantidadeDeEstoque))
 			return false;
 		return true;
 	}

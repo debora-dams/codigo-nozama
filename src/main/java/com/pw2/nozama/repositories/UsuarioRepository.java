@@ -11,7 +11,4 @@ import com.pw2.nozama.model.Usuario;
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
 
 	List<Usuario> findByNome(String nome);
-	
-
-
 }

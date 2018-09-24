@@ -20,6 +20,8 @@ public class Produto {
 	private String marca;
 	@Column
 	private Integer quantidadeDeEstoque;
+	@Column
+	private Categoria categoria; 
 
 	public Produto(String nome, Double preco, Integer codigoProd, String marca) {
 		this.nome = nome;

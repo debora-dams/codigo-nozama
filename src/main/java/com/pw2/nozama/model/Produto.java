@@ -23,11 +23,10 @@ public class Produto {
 	@Column
 	private Categoria categoria; 
 
-	public Produto(String nome, Double preco, Integer codigoProd, String marca) {
+	public Produto(String nome, Double preco) {
 		this.nome = nome;
 		this.preco = preco;
-		this.id = codigoProd;
-		this.marca = marca;
+	
 	}
 
 	public Produto() {

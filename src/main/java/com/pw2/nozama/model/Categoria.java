@@ -11,7 +11,7 @@ import javax.persistence.Id;
 */
 
 @Entity
-public class Departamento {
+public class Categoria {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,12 +19,12 @@ public class Departamento {
 	@Column
 	private String nome;
 
-	public Departamento(String nome, Integer id) {
+	public Categoria(String nome, Integer id) {
 		this.nome = nome;
 		this.id = id;
 	}
 
-	public Departamento() {
+	public Categoria() {
 
 	}
 
@@ -60,7 +60,7 @@ public class Departamento {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Departamento other = (Departamento) obj;
+		Categoria other = (Categoria) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

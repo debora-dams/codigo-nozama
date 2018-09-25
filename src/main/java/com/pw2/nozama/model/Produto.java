@@ -34,13 +34,6 @@ public class Produto {
 
 	}
 
-	public Integer getCodigoProd() {
-		return id;
-	}
-
-	public void setCodigoProd(Integer codigoProd) {
-		this.id = codigoProd;
-	}
 
 	public String getNome() {
 		return nome;
@@ -72,6 +65,22 @@ public class Produto {
 
 	public void setQuantidadeDeEstoque(Integer quantidadeDeEstoque) {
 		this.quantidadeDeEstoque = quantidadeDeEstoque;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
 
 	@Override

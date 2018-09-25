@@ -16,7 +16,7 @@ import com.pw2.nozama.model.Endereco;
 import com.pw2.nozama.repositories.EnderecoRepository;
 
 @RestController
-@RequestMapping("/endereco")
+@RequestMapping("/api/endereco")
 public class EnderecoResource {
 
 	@Autowired

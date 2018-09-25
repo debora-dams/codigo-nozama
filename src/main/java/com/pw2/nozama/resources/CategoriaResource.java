@@ -46,7 +46,7 @@ public class CategoriaResource {
 	
 	@GetMapping("/buscar")
 	public List<Categoria> buscar(@RequestParam("nome") String nome) {
-		List<Categoria> usuarios = categoriaRepository.findByNomeContenersIgnoreCase(nome);
+		List<Categoria> usuarios = categoriaRepository.findByNomeContainingIgnoreCase(nome);
 		return usuarios;
 
 	}

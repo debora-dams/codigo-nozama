@@ -16,7 +16,7 @@ import com.pw2.nozama.model.Carrinho;
 import com.pw2.nozama.repositories.CarrinhoRepository;
 
 @RestController
-@RequestMapping("/carrinho")
+@RequestMapping("/api/carrinho")
 public class CarrinhoResource {
 	
 	@Autowired

@@ -18,7 +18,7 @@ import com.pw2.nozama.model.Usuario;
 import com.pw2.nozama.repositories.ProdutoRepository;
 
 @RestController
-@RequestMapping("/produto")
+@RequestMapping("/api/produto")
 public class ProdutoResource {
 
 	@Autowired
@@ -51,7 +51,7 @@ public class ProdutoResource {
 	
 	@GetMapping("/buscar")
 	public List<Produto> buscar(@RequestParam("nome") String nome) {
-		List<Produto> usuarios = produtoRepository.findByNomeContenersIgnoreCase(nome);
+		List<Produto> usuarios = produtoRepository.findByNomeContainingIgnoreCase(nome);
 		return usuarios;
 
 	}

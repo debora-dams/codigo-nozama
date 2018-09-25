@@ -17,7 +17,7 @@ import com.pw2.nozama.model.Usuario;
 import com.pw2.nozama.repositories.UsuarioRepository;
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/api/usuario")
 public class UsuarioResource {
 
 	@Autowired

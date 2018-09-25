@@ -11,7 +11,7 @@ import com.pw2.nozama.model.Categoria;
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Integer>{
 
-	List<Categoria> findByNomeContenersIgnoreCase(String nome);
+	List<Categoria> findByNomeContainingIgnoreCase(String nome);
 
 	
 }

@@ -16,6 +16,7 @@ public class Categoria {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
+	
 	@Column
 	private String nome;
 

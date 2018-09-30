@@ -12,19 +12,26 @@
 <body>
 
 	<div class="container">
+	
+		<h1>Lista de Produtos</h1>
+		
 		<table class="table">
 			<thead>
 				<tr>
 					<th>Código</th>
 					<th>Nome</th>
+					<th>Marca</th>
 					<th>Preço</th>
+					<th>Quantidade</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr th:each="p : ${listaProdutos}">
 					<td th:text="${p.id}"></td>
 					<td th:text="${p.nome}"></td>
+					<td th:text="${p.marca}"></td>
 					<td th:text="${p.preco}"></td>
+					<td th:text="${p.quantidadeDeEstoque}"></td>
 				</tr>
 			</tbody>
 		</table>

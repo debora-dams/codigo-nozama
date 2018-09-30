@@ -7,11 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.pw2.nozama.model.Categoria;
 
-
 @Repository
-public interface CategoriaRepository extends JpaRepository<Categoria, Integer>{
+public interface CategoriaRepository extends JpaRepository<Categoria, Integer> {
 
 	List<Categoria> findByNomeContainingIgnoreCase(String nome);
 
-	
 }

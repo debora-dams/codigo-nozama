@@ -17,14 +17,13 @@ public class ProdutoController {
 
 	@Autowired
 	ProdutoRepository produtoRepository;
-	
-	@GetMapping(value= "list")
+
+	@GetMapping(value = "list")
 	public String listarProduto(ModelMap model) {
 		List<Produto> produtos = produtoRepository.findAll();
-		
+
 		model.addAttribute("listaProdutos", produtos);
-		//model.addAttribute("message", "lista de produtos");
-		
+
 		return "produto/list";
 	}
 }

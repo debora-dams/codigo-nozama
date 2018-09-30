@@ -1,4 +1,4 @@
-package com.pw2.nozama.Controller;
+package com.pw2.nozama.controller;
 
 import java.util.List;
 

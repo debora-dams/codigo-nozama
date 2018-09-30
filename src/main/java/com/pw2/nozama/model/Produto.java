@@ -1,5 +1,6 @@
 package com.pw2.nozama.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,19 +22,17 @@ public class Produto {
 	private String marca;
 	@Column
 	private Integer quantidadeDeEstoque;
-	@ManyToOne
-	private Categoria categoria; 
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Categoria categoria;
 
 	public Produto(String nome, Double preco) {
 		this.nome = nome;
 		this.preco = preco;
-	
 	}
 
 	public Produto() {
 
 	}
-
 
 	public String getNome() {
 		return nome;

@@ -59,8 +59,12 @@ public class Relatorio {
 
 	public Double getMenorPreco() {
 		return menorPreco;
+<<<<<<< HEAD
 }
 	
 	
+=======
+	}
+>>>>>>> 7093474f5495080a09b04f6a7584f562e51d73b5
 
 }

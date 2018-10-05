@@ -39,6 +39,8 @@ public class ProdutoController {
 
 		prodR.save(produto);
 
-		return "redirect:/produto/cadastrar";
+		return "redirect:/produto/list";
 	}
+	
+	
 }

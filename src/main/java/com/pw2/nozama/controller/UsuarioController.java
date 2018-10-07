@@ -41,5 +41,13 @@ public class UsuarioController {
 
 		return "redirect:/usuario/list";
 	}
+	
+	@RequestMapping("/deletar")
+	public String deletarUsuario(Integer id) {
+		
+		usuarioRepository.deleteById(id);
+		
+		return "redirect:/usuario/list";
+	}
 
 }

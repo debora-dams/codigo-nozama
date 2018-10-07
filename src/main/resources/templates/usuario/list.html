@@ -32,7 +32,6 @@
 					<td th:text="${user.nome}"></td>
 					<td th:text="${user.email}"></td>
 					<td>Confidencial</td>
-					<td th:text="${user.endereco}"></td>
 					<td th:text="${user.telefone}"></td>
 					<td>
 						<a href="">
@@ -40,8 +39,8 @@
 						</a>
 					</td>
 					<td>
-						<a href="">
-							excluir
+						<a th:href="${(#mvc.url('UC#deletarUsuario').arg(0, user.id)).build()}">
+							<i class="fa fa-trash" style="font-size:19px;color:red"></i>
 						</a>
 					</td>
 				</tr>

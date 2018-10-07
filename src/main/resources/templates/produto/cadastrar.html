@@ -13,7 +13,7 @@
 	<div class="container">
 		<h1>Cadastrar Produtos</h1>
 		
-		<form method="POST">
+		<form method="POST" th:object="${produtoobj}">
 			<div class="form-group">
 					<input type="text" class="form-control" name="nome" placeholder="Nome">
 			</div>

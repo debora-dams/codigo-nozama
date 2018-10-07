@@ -11,6 +11,5 @@ import com.pw2.nozama.model.Produto;
 public interface ProdutoRepository extends JpaRepository<Produto, Integer>{
 
 	List<Produto> findByNomeContainingIgnoreCase(String nome);
-	
 
 }

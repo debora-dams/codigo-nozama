@@ -36,7 +36,7 @@
 					<td th:text="${p.preco}"></td>
 					<td th:text="${p.quantidadeDeEstoque}"></td>
 					<td>
-						<a href="">
+						<a th:href="@{/editarProduto/{id}(id=${p.id})}">
 							<i class="fa fa-edit" style="font-size:19px;color:blue"></i>
 						</a>
 					</td>

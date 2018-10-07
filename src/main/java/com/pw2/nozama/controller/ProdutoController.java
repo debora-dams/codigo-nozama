@@ -41,5 +41,13 @@ public class ProdutoController {
 
 		return "redirect:/produto/list";
 	}
+	
+	@RequestMapping("/deletar")
+	public String deletarProduto(Integer id) {
+		
+		prodR.deleteById(id);
+		
+		return "redirect:/produto/list";
+	}
 
 }

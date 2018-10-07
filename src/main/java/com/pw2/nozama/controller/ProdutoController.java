@@ -1,13 +1,16 @@
 package com.pw2.nozama.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.pw2.nozama.model.Produto;
 import com.pw2.nozama.repositories.ProdutoRepository;
@@ -49,5 +52,24 @@ public class ProdutoController {
 		
 		return "redirect:/produto/list";
 	}
-
+	
+	/*@RequestMapping(value="/listProduto", method = RequestMethod.GET)
+	public ModelAndView produtos() {
+		ModelAndView andView = new ModelAndView("produto/cadastrar");
+		Iterable<Produto> produtos = prodR.findAll();
+		andView.addObject("listaProdutos", produtos);
+		
+		return andView;
+	}*/
+	
+	@GetMapping("/editarProduto/{id}")
+	public ModelAndView editarProduto(@PathVariable("id") Integer id) {
+		
+		Optional<Produto> produto = prodR.findById(id);
+		
+		ModelAndView andView = new ModelAndView("produto/cadastrar");
+		andView.addObject("produtoobj", produto.get());
+		
+		return andView;
+	}
 }

@@ -24,6 +24,7 @@
 					<th>Marca</th>
 					<th>Preço</th>
 					<th>Quantidade</th>
+					<th>Categoria</th>
 					<th>Editar</th>
 					<th>Apagar</th>
 				</tr>
@@ -35,8 +36,9 @@
 					<td th:text="${p.marca}"></td>
 					<td th:text="${p.preco}"></td>
 					<td th:text="${p.quantidadeDeEstoque}"></td>
+					<td th:text="${p.categoria}"></td>
 					<td>
-						<a th:href="@{/editarProduto/{id}(id=${p.id})}">
+						<a th:href="${(#mvc.url('PC#editar').arg(0, p.id)).build()}">
 							<i class="fa fa-edit" style="font-size:19px;color:blue"></i>
 						</a>
 					</td>

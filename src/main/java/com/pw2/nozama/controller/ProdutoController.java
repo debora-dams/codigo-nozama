@@ -44,32 +44,25 @@ public class ProdutoController {
 
 		return "redirect:/produto/list";
 	}
-	
+
 	@RequestMapping("/deletar")
 	public String deletarProduto(Integer id) {
-		
+
 		prodR.deleteById(id);
-		
+
 		return "redirect:/produto/list";
 	}
-	
-	/*@RequestMapping(value="/listProduto", method = RequestMethod.GET)
-	public ModelAndView produtos() {
+
+	@GetMapping(value = "/editarProduto/{id}")
+	public ModelAndView editar(@PathVariable("id") Integer id) {
+
+		Optional<Produto> prod = prodR.findById(id);
+
 		ModelAndView andView = new ModelAndView("produto/cadastrar");
-		Iterable<Produto> produtos = prodR.findAll();
-		andView.addObject("listaProdutos", produtos);
-		
+		andView.addObject("produtoobj", prod.get());
+
 		return andView;
-	}*/
-	
-	@GetMapping("/editarProduto/{id}")
-	public ModelAndView editarProduto(@PathVariable("id") Integer id) {
-		
-		Optional<Produto> produto = prodR.findById(id);
-		
-		ModelAndView andView = new ModelAndView("produto/cadastrar");
-		andView.addObject("produtoobj", produto.get());
-		
-		return andView;
+
 	}
+
 }

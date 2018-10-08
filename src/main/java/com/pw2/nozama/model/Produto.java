@@ -22,8 +22,8 @@ public class Produto {
 	private String marca;
 	@Column
 	private Integer quantidadeDeEstoque;
-	@ManyToOne(cascade = CascadeType.ALL)
-	private Categoria categoria;
+	@Column
+	private String categoria;
 
 	public Produto(String nome, Double preco) {
 		this.nome = nome;
@@ -32,6 +32,14 @@ public class Produto {
 
 	public Produto() {
 
+	}
+	
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
 	}
 
 	public String getNome() {
@@ -72,14 +80,6 @@ public class Produto {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public Categoria getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
 	}
 
 	@Override

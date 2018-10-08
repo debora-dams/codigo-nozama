@@ -23,8 +23,19 @@
 			<div class="form-group">
 					<input type="text" class="form-control" name="preco" placeholder="Preço">
 			</div>
-			<div class="form-group">			
-					<input type="text" class="form-control" name="quantidadeDeEstoque" placeholder="Quantidade">
+			<div class="form-group">
+					<div class="row">
+						<div class="col">
+							<input type="text" class="form-control" name="quantidadeDeEstoque" placeholder="Quantidade">		
+						</div>
+						<div class="col">
+							<select class="form-control" name="categoria">
+								  <option value="tv">TV</option>
+								  <option value="celulares">Celulares</option>
+								  <option value="computadores">Computadores</option>
+							</select>
+						</div>
+					</div>
 			</div>
 			<button type="submit" class="btn btn-success">
 				Adicionar

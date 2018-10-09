@@ -1,12 +1,10 @@
 package com.pw2.nozama.model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Produto {
@@ -33,7 +31,7 @@ public class Produto {
 	public Produto() {
 
 	}
-	
+
 	public String getCategoria() {
 		return categoria;
 	}

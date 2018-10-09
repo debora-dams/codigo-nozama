@@ -17,10 +17,10 @@ public class Carrinho {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	
+
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Produto> produtos = new ArrayList<>();
-	
+
 	@Column
 	private Double total;
 

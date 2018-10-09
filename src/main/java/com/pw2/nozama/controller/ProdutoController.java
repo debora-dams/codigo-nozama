@@ -32,13 +32,16 @@ public class ProdutoController {
 	}
 
 	@RequestMapping(value = "/cadastrar", method = RequestMethod.GET)
-	public String form() {
+	public String salvar(ModelMap model) {
+		
+		Produto produto = new Produto();
+		model.addAttribute("produtoobj", produto);
 
 		return "produto/cadastrar";
 	}
 
 	@RequestMapping(value = "/cadastrar", method = RequestMethod.POST)
-	public String form(Produto produto) {
+	public String salvar(Produto produto) {
 
 		prodR.save(produto);
 
